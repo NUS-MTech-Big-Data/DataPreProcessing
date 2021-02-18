@@ -5,6 +5,6 @@ object Main extends App {
   val extractedText = "I am&&& a new to data science!!"
   val resultTokens = DataPreprocessing.tokenization(extractedText)
   resultTokens.select("words").show(false)
+  val result = DataPreprocessing.removeStopWords(resultTokens)
   spark.stop()
-
 }
