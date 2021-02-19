@@ -20,7 +20,8 @@ object DataPreprocessing {
     val regexTokenizer = new RegexTokenizer()
       .setInputCol("sentence")
       .setOutputCol("words")
-      .setPattern("\\W")
+      .setGaps(false)
+      .setPattern("\\b[a-zA-Z]+\\b")
     val regexTokenized = regexTokenizer.transform(textDataFrame)
     regexTokenized.select("sentence", "words").show(false)
     return regexTokenized;
