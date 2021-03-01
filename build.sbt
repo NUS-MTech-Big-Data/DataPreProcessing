@@ -7,9 +7,9 @@ scalaVersion := "2.11.11"
 val sparkVersion = "2.4.7"
 
 
-resolvers ++= Seq(
-  "apache-snapshots" at "http://repository.apache.org/snapshots/"
-)
+// resolvers ++= Seq(
+  // "apache-snapshots" at "http://repository.apache.org/snapshots/"
+// )
 
 libraryDependencies ++= Seq(
   "mysql" % "mysql-connector-java" % "5.1.+",
